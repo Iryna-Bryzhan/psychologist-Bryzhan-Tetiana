@@ -1826,24 +1826,26 @@ margin: 0 auto;
         .contacts__icon-main {
             justify-content: center;
         }
-        .contact-social-main {
-            margin-top: 25%;
-        }
         .content-left__text p {
             font-size: 1.1rem;
-            margin-bottom: 6%;
+            margin-bottom: 3%;
+        }
+        .content-left {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
         }
         .main{
-            margin-top: 15%;
+            margin-top: 10%;
             flex-direction: column-reverse;
             justify-content: space-around;
         }
         .header-name {
-            margin-left: -10%;
             text-align: center;
-            width: 120%;
+            width: 100%;
             font-size: 1.6rem;
             letter-spacing: 1.5px;
+            margin-bottom: 5%;
         }
         .content-left{
             text-align: center;
@@ -1863,6 +1865,7 @@ margin: 0 auto;
         .btn {
             font-size: 1rem;
             margin:  0 auto;
+            padding: 15px 18px;
         }
         .section-title {
             font-size: 1.5rem;
@@ -2044,7 +2047,7 @@ margin: 0 auto;
   .contact-social-main {
     text-align: center;
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 .contacts__icon-main {
     justify-content: center;
@@ -2208,30 +2211,35 @@ margin: 0 auto;
             font-size: 1.4rem;
         }
         .contact-social-main {
-            margin-top: 20%;
+            margin-top: 5%;
+            width: 80%;
         }
         .content-left__text p {
-            font-size: 1.3rem;
-            margin-bottom: 8%;
+            font-size: 1.1rem;
+            margin-bottom: 5%;
         }
         .main{
-            margin-top: 20%;
+            margin-top: 15%;
             flex-direction: column-reverse;
         }
         .header-name {
-            margin-left: -5%;
             text-align: center;
-            width: 110%;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             letter-spacing: 1.5px;
+            margin-bottom: 5%;
         }
         .content-left{
             text-align: center;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
         }
+        .content-left__text{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
         .content-right {
-            width: 80%;
+            width: 70%;
             margin: 0 auto;
             margin-top: 15%;
             margin-right: 5%;
@@ -2243,6 +2251,8 @@ margin: 0 auto;
         .btn {
             font-size: 1.1rem;
             margin:  0 auto;
+            margin-bottom: 3%;
+            padding: 15px 18px;
         }
         .section-title {
             font-size: 1.5rem;
