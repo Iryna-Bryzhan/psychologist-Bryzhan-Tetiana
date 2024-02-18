@@ -42,9 +42,7 @@ a{
 .header__logo{
     width: 25%;
 }
-.logo{
 
-}
 .logo p{
     margin: 0;
     line-height: 1.3;
@@ -76,7 +74,7 @@ a{
 }
 .button__text{
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 140%;
     color: #394248;
     text-decoration: none;
@@ -200,7 +198,7 @@ a{
     text-transform: uppercase;
     font-size: 1.6rem;
     border: 1px solid #394248;
-    border-radius: 5%;
+    border-radius: 10px;
     background-color: #0b558e;
     letter-spacing: 0.2rem;
     font-weight: 600; 
@@ -592,7 +590,6 @@ top: 5%;
   .price{
     position: relative;
     padding-top: 7%;
-    margin-bottom: 7%;
   }
   
   .cards{
@@ -688,7 +685,7 @@ box-shadow: 8px 8px 15px 0px rgba(11,85,142,1); */
     margin-bottom: 1%;
   }
   .registration__title{
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     color: #0b558e;
     font-weight: 500;
     padding: 3% 0;
@@ -698,8 +695,10 @@ box-shadow: 8px 8px 15px 0px rgba(11,85,142,1); */
 
 
 .registration{
+    position: relative;
     text-align: center;
     margin-bottom: 8%;
+    padding-top: 5%;
 }
 .form{
     display: flex;
@@ -728,13 +727,205 @@ box-shadow: 8px 8px 15px 0px rgba(11,85,142,1); */
     color: #0b558e;
 }
 .form label{
-    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0b558e;
+    font-size: 1.6rem;
     text-align: left;
+    margin-bottom: 2%;
 }
 .input span{
     color: red;
 }
+.error{
+    color: red;
+    font-size: 16px;
+    margin-bottom: 3%;
+    text-align: end;
+}
+.modal-success {
+    background-color: #0b234990;
+    /* padding-top: 15%; */
+    display: flex;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 10;
+   
+}
+.modal-error {
+    background-color: #0b234990;
+    /* padding-top: 15%; */
+    display: flex;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 10;
+ }
+
+
+.success-content, .error-content{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    text-align: center;
+box-sizing: border-box;
+    height: 98%;
+    width: 100%;
+    z-index: 16;
+    margin: 0 auto;
+}
+
+.success-icon img{
+    max-width: 100px;
+}
+.error-icon img{
+    max-width: 100px;
+}
+.success-text, .error-text{  
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1%;
+}
+
+
+
+
+.call-phone{
+    position: absolute;
+    position: fixed;
+    right: 5%;
+    bottom: 8%;
+    z-index: 9;
+    cursor: pointer;
+}
+.call-phone-icon{
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(70deg, #B2D9FB 0%, rgba(235, 238, 246, 0.5) 100%);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #0b558e;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.call-phone-icon img{
+    width: 70%;
+    margin: 0 auto;
+}
+#call-text{
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.9;
+    text-align: center;
+    line-height: 1.2;
+    text-transform: uppercase;
+  
+}
+
+.modal-call{
+    position: relative;
+    width: 40%;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 5% 3%;
+    background: linear-gradient(70deg, #B2D9FB 0%, rgba(235, 238, 246, 1) 100%);
+    color: white;
+    border-radius: 10px;
+}
+
+
+.modal-form-call {
+    background-color: #0b234990;
+    padding-top: 15%;
+    display: flex;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 10;
+}
+
+.form-input-item input{
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    padding: 2% 5%;
+    margin-top: 1%;
+}
+.form-input-item label{
+    font-weight: 600;
+    color: #0b558e;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1%;
+}
+.iti--separate-dial-code .iti__selected-dial-code {
+    color: black;
+}
+
+.iti__country span {
+    color: black;
+    font-size: 15px;
+}
+.iti__country-list {
+    max-width: 410px;
+}
+.required{
+    color: red;
+    font-size: 1.5rem;
+}
+.close-call{
+    width: 5%;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+}
+.close-call img{
+    width: 100%;
+}
+
+.btn-form-call{
+    height: 60px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    max-width: 100%;
+    font-size: 1.6rem;
+    border: 1px solid #394248;
+    border-radius: 10px;
+    background-color: #0b558e;
+    letter-spacing: 0.2rem;
+}
+label>span{
+    color: #ff0000;
+    font-size: 1.6rem;
+}
+
+
+
 .section-contacts{
+    padding: 0 5%;
     background: linear-gradient(70deg, #B2D9FB 0%, rgba(235, 238, 246, 0.5) 100%);
 }
 .contacts{
@@ -747,6 +938,7 @@ box-shadow: 8px 8px 15px 0px rgba(11,85,142,1); */
     color: #394248;
     font-size: 1rem;
     margin: 0;
+    padding: 0;
 }
 .menu-footer a{
     font-size: 1.3rem;
@@ -826,6 +1018,11 @@ box-shadow: 8px 8px 15px 0px rgba(11,85,142,1); */
     .about-content-rigt P {
         font-size: 1.2rem;
     }
+    .modal-success , 
+    .modal-error{
+        top: 27%;
+        height: 88%;
+    }
 }
 
 @media (min-width: 1260px)  and (max-width: 1351px) {
@@ -878,6 +1075,11 @@ box-shadow: 8px 8px 15px 0px rgba(11,85,142,1); */
     }
     .title-text{
         font-size: 2.3rem;
+    }
+    .modal-success , 
+    .modal-error{
+        top: 27%;
+        height: 88%;
     }
 }
 @media (min-width: 1100px)  and (max-width: 1261px) {
@@ -977,6 +1179,11 @@ font-size: 1.1rem;
 }
 .contacts__number a, .contacts__email a {
     font-size: 1.1rem;
+}
+.modal-success , 
+.modal-error{
+    top: 23%;
+    height: 88%;
 }
 }
 
@@ -1108,6 +1315,11 @@ font-size: 1.1rem;
     }
     .form input {
         font-size: 1.3rem;
+    }
+    .modal-success , 
+    .modal-error{
+        top: 21%;
+        height: 92%;
     }
     .iti--separate-dial-code .iti__selected-dial-code {
         font-size: 1rem;
@@ -1279,6 +1491,11 @@ font-size: 1.1rem;
     }
     .form input {
         font-size: 1.1rem;
+    }
+    .modal-success , 
+    .modal-error{
+        top: 21%;
+        height: 92%;
     }
     .iti--separate-dial-code .iti__selected-dial-code {
         font-size: 1rem;
@@ -1497,6 +1714,11 @@ margin: 0 auto;
     }
     .form input {
         font-size: 1.1rem;
+    }
+    .modal-success , 
+    .modal-error{
+        top: 23%;
+        height: 85%;
     }
     .iti--separate-dial-code .iti__selected-dial-code {
         font-size: 1rem;
@@ -2101,6 +2323,14 @@ margin: 0 auto;
         max-width: 320px;
         font-size: 1.1rem;
     }
+    .modal-success {
+        top: 26%;
+        height: 90%;
+    }
+    .modal-error {
+       top:26%;
+         height: 80%;
+     }
   .contacts{
     flex-direction: column;
     text-align: center;

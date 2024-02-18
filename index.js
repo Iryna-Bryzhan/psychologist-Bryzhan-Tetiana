@@ -28,6 +28,20 @@ var iti = window.intlTelInput(input,{
     utilsScript: 'build/utils.js'
 });
 
+var input = document.querySelector("#phone-back-call");
+var iti = window.intlTelInput(input,{
+    initialCountry: "auto",
+    geoIpLookup: function(success, failure) {
+        $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "us";
+            success(countryCode);
+        });
+    },
+    autoPlaceholder: "aggressive",
+    customPlaceholder: true,
+    separateDialCode: true,
+    utilsScript: 'build/utils.js'
+});
 
 //*Плавный преход меню*//
 
@@ -286,3 +300,283 @@ function handleMenuClick(event, targetSection) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
+
+
+
+   // Функция для проверки валидности email
+   function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Функция для проверки валидности телефонного номера
+function isValidPhone(phone) {
+  return /^\d+$/.test(phone);
+    // return /^\\d{2}\\s\d{3}\s\d{2}\s\d{2}$/.test(phone);
+}
+
+// Функция для валидации имени
+function validateName() {
+    const nameInput = document.getElementById('name-call');
+    const nameError = document.getElementById('name-error');
+    const name = nameInput.value.trim();
+
+    if (name === '') {
+        nameError.textContent = 'Пожалуйста, введите ваше имя';
+        return false;
+    } else {
+        nameError.textContent = '';
+        return true;
+    }
+}
+
+// Функция для валидации email
+function validateEmail() {
+    const emailInput = document.getElementById('email-call');
+    const emailError = document.getElementById('email-error');
+    const email = emailInput.value.trim();
+
+    if (email === '') {
+        emailError.textContent = 'Пожалуйста, введите ваш email';
+        return false;
+    } else if (!isValidEmail(email)) {
+        emailError.textContent = 'Пожалуйста, введите корректный email';
+        return false;
+    } else {
+        emailError.textContent = '';
+        return true;
+    }
+}
+
+// Функция для валидации телефонного номера
+function validatePhone() {
+    const phoneInput = document.getElementById('phone');
+    const phoneError = document.getElementById('phone-error');
+    const phone = phoneInput.value.trim();
+
+    if (phone === '') {
+        phoneError.textContent = 'Пожалуйста, введите ваш номер телефона';
+        return false;
+    } else if (!isValidPhone(phone)) {
+        phoneError.textContent = 'Пожалуйста, введите корректный номер телефона';
+        return false;
+    } else {
+        phoneError.textContent = '';
+        return true;
+    }
+}
+
+// Функция для сброса значений полей формы
+function resetFormFields() {
+  document.getElementById('name-call').value = '';
+  document.getElementById('email-call').value = '';
+  document.getElementById('phone').value = '';
+}
+// Функция для скрытия модального окна с сообщением об ошибке
+function hideModalError() {
+  document.querySelector('.modal-error').style.display = 'none';
+}
+
+// Функция для показа модального окна с сообщением об ошибке при неудачной отправке данных
+function showModalError() {
+  const modalError = document.querySelector('.modal-error');
+  modalError.style.display = 'block';
+
+  // Скрыть модальное окно через 3 секунды
+  setTimeout(function() {
+      hideModalError();
+  }, 3000);
+}
+
+// Функция для скрытия модального окна с сообщением об успешной отправке
+function hideModalSuccess() {
+  document.querySelector('.modal-success').style.display = 'none';
+}
+
+// Функция для показа модального окна с сообщением об успешной отправке данных
+function showModalSuccess() {
+  const modalSuccess = document.querySelector('.modal-success');
+  modalSuccess.style.display = 'block';
+
+  // Скрыть модальное окно через 3 секунды
+  setTimeout(function() {
+      hideModalSuccess();
+  }, 3000);
+ }
+
+// Функция для сбора данных формы и их вывода в консоль
+function collectFormData() {
+  const nameInput = document.getElementById('name-call');
+  const emailInput = document.getElementById('email-call');
+  const phoneInput = document.getElementById('phone');
+const cod = document.querySelector('.iti__selected-dial-code').innerHTML
+  const formData = {
+      name: nameInput.value.trim(),
+      email: emailInput.value.trim(),
+      phone: cod + phoneInput.value.trim()
+  };
+
+  console.log(formData);
+  resetFormFields(); // Очищаем поля формы после отправки
+
+  // Эмуляция неудачной отправки данных (замените эту часть на реальный код отправки данных на сервер)
+  const isSuccess = true;
+
+  if (isSuccess) {
+      showModalSuccess(); // Показываем модальное окно с сообщением об успешной отправке
+  } else {
+      showModalError(); // Показываем модальное окно с сообщением об ошибке
+  }
+}
+
+
+
+
+
+// Добавляем обработчики событий для валидации при потере фокуса
+document.getElementById('name-call').addEventListener('blur', validateName);
+document.getElementById('email-call').addEventListener('blur', validateEmail);
+document.getElementById('phone').addEventListener('blur', validatePhone);
+
+// Добавляем обработчик события отправки формы для сбора данных
+document.querySelector('.form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Предотвращаем отправку формы
+    if (validateName() && validateEmail() && validatePhone()) {
+        collectFormData(); // Если все данные валидны, собираем их
+        // Здесь можно добавить код для отправки данных на сервер
+    }
+});
+
+
+
+
+  // Получаем ссылку на элемент с классом "call-phone"
+  const callPhone = document.querySelector('.call-phone');
+  // Получаем ссылку на модальное окно с классом "modal-form-call"
+  const modalFormCall = document.querySelector('.modal-form-call');
+  
+  // Добавляем обработчик события "click" на элемент "callPhone"
+  callPhone.addEventListener('click', function() {
+    // При клике на "callPhone" отображаем модальное окно
+    modalFormCall.style.display = 'block';
+  });
+
+  const btnCloseCall = document.querySelector(".close-call")
+
+      // При клике на "btnCloseCall" отображаем модальное окно
+
+   btnCloseCall.addEventListener('click', () => {
+    modalFormCall.style.display = "none";
+  })
+
+
+  const formCall = document.querySelector('.form-call');
+  const modalCall = document.querySelector('.modal-form-call');
+  const errorContent = document.querySelector('.error-content');
+  const successContent = document.querySelector('.success-content');
+  
+ // Функция для валидации имени
+function validateNameCall() {
+  const nameInput = document.getElementById('name-back-call');
+  const nameError = document.getElementById('name-error-call');
+  const name = nameInput.value.trim();
+
+  if (name === '') {
+      nameError.textContent = 'Пожалуйста, введите ваше имя';
+      return false;
+  } else {
+      nameError.textContent = '';
+      return true;
+  }
+}
+
+// Функция для валидации телефонного номера
+function validatePhoneCall() {
+  const phoneInput = document.getElementById('phone-back-call');
+  const phoneError = document.getElementById('phone-error-call');
+  const phone = phoneInput.value.trim();
+
+  if (phone === '') {
+      phoneError.textContent = 'Пожалуйста, введите ваш номер телефона';
+      return false;
+  } else if (!isValidPhone(phone)) {
+      phoneError.textContent = 'Пожалуйста, введите корректный номер телефона';
+      return false;
+  } else {
+      phoneError.textContent = '';
+      return true;
+  }
+}
+
+// Функция для сброса значений полей формы
+function resetFormFieldsCall() {
+  document.getElementById('name-back-call').value = '';
+  document.getElementById('phone-back-call').value = '';
+}
+
+// Функция для скрытия модального окна
+function hideModal() {
+  document.querySelector('.modal-form-call').style.display = 'none';
+}
+
+// Функция для сбора данных формы и их вывода в консоль
+function collectFormDataCall() {
+  const nameInput = document.getElementById('name-back-call');
+  const phoneInput = document.getElementById('phone-back-call');
+  const cod = document.querySelector('.iti__selected-dial-code').innerHTML
+
+
+  const formData = {
+      name: nameInput.value.trim(),
+      phone: cod + phoneInput.value.trim()
+  };
+
+  console.log(formData);
+
+  resetFormFieldsCall(); // Очищаем поля формы после отправки
+
+  // Здесь можно добавить реальный код отправки данных на сервер
+
+  // Эмуляция неудачной отправки данных (замените эту часть на реальный код отправки данных на сервер)
+  const isSuccess = true;
+
+  if (isSuccess) {
+      showModalSuccess(); // Показываем модальное окно с сообщением об успешной отправке
+    hideModal()
+    } else {
+      showModalError(); // Показываем модальное окно с сообщением об ошибке
+      hideModal()
+    }
+}
+
+// Добавляем обработчики событий для валидации и отправки формы
+document.getElementById('name-back-call').addEventListener('blur', validateNameCall);
+document.getElementById('phone-back-call').addEventListener('blur', validatePhoneCall);
+
+document.querySelector('.form-call').addEventListener('submit', function(event) {
+  event.preventDefault(); // Предотвращаем отправку формы
+
+  if (validateNameCall() && validatePhoneCall()) {
+      collectFormDataCall(); // Если все данные валидны, собираем их и отправляем форму
+  }
+});
+
+
+   // Получаем ссылки на иконку и текст
+   const icon = document.getElementById('call-icon');
+   const text = document.getElementById('call-text');
+  
+   // Функция для переключения между иконкой и текстом
+   function toggleIconAndText() {
+       if (icon.style.display === 'none') {
+           icon.style.display = 'inline';
+           text.style.display = 'none';
+       } else {
+           icon.style.display = 'none';
+           text.style.display = 'inline';
+       }
+   }
+  
+  // Запускаем функцию toggleIconAndText каждые 2 секунды
+  setInterval(toggleIconAndText, 3500);
+  
