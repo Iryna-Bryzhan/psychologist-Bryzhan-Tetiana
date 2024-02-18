@@ -836,11 +836,11 @@ box-sizing: border-box;
 
 .modal-call{
     position: relative;
-    width: 40%;
+    width: 35%;
     margin: 0 auto;
     overflow: hidden;
     box-sizing: border-box;
-    padding: 5% 3%;
+    padding: 4% 3%;
     background: linear-gradient(70deg, #B2D9FB 0%, rgba(235, 238, 246, 1) 100%);
     color: white;
     border-radius: 10px;
@@ -849,7 +849,7 @@ box-sizing: border-box;
 
 .modal-form-call {
     background-color: #0b234990;
-    padding-top: 15%;
+    padding-top: 10%;
     display: flex;
     text-align: center;
     position: fixed;
