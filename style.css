@@ -1834,7 +1834,7 @@ margin: 0 auto;
             width: 100%;
             display: flex;
             flex-direction: column;
-            text-align: center;
+            align-items: center;
             margin: 0 auto;
         }
         .main{
@@ -2220,6 +2220,7 @@ margin: 0 auto;
             margin-top: 10%;
             height: 85vh;
             flex-direction: column-reverse;
+            justify-content: space-evenly;
         }
         .header-name {
             text-align: center;
