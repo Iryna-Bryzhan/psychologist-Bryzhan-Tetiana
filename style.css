@@ -1834,6 +1834,8 @@ margin: 0 auto;
             width: 100%;
             display: flex;
             flex-direction: column;
+            text-align: center;
+            margin: 0 auto;
         }
         .main{
             margin-top: 10%;
@@ -1846,11 +1848,6 @@ margin: 0 auto;
             font-size: 1.6rem;
             letter-spacing: 1.5px;
             margin-bottom: 5%;
-        }
-        .content-left{
-            text-align: center;
-            width: 80%;
-            margin: 0 auto;
         }
         .content-right {
             width: 80%;
@@ -2221,7 +2218,7 @@ margin: 0 auto;
         }
         .main{
             margin-top: 10%;
-            height: 88vh;
+            height: 85vh;
             flex-direction: column-reverse;
         }
         .header-name {
