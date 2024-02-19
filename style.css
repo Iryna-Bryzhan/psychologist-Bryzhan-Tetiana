@@ -2194,6 +2194,7 @@ margin: 0 auto;
       }
       .menu-burger{
         margin-top: -10%;
+        height: 110vh;
       }
       .container-burger{
           display: block;
@@ -2220,6 +2221,7 @@ margin: 0 auto;
         }
         .main{
             margin-top: 10%;
+            height: 88vh;
             flex-direction: column-reverse;
         }
         .header-name {
@@ -2482,6 +2484,9 @@ margin: 0 auto;
     .form-input-item input {
         height: 50px;
         font-size: 1.3rem;
+    }
+    .registration {
+        padding-top: 15%;
     }
 }
     /* .menu{
