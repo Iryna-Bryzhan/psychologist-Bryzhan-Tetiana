@@ -1994,6 +1994,9 @@ label > span {
   .content-right__photo {
     width: 100%;
   }
+  .main-button{
+    margin: 0 auto;
+  }
   .btn {
     font-size: 1rem;
     margin: 0 auto;
@@ -2356,6 +2359,9 @@ label > span {
   }
   .content-right__photo {
     width: 100%;
+  }
+  .main-button{
+    margin: 0 auto;
   }
   .btn {
     font-size: 1.1rem;
