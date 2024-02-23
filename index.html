@@ -1,402 +1,590 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fonts.css">
-    
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
 
-    <link rel="stylesheet" href="build/intlTelInput.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/intlTelInput.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <link rel="stylesheet" href="/animate.min.css">
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="/animate.min.css" />
 
     <title>Psychologist Bryzhan Tetiana</title>
-</head>
-<body>
-<header>
-<div class="header " id="header">
-    <div class="header-menu" id="header-menu">
-    <div class="header__logo">
-        <div class="logo" id="logo">
-            <a href="https://iryna-bryzhan.github.io/psychologist-Bryzhan-Tetiana/">
-            <p class="name">Татьяна</p>
-            <p class="surname">Брижань</p>
-        </a>
+  </head>
+  <body>
+    <header>
+      <div class="header" id="header">
+        <div class="header-menu" id="header-menu">
+          <div class="header__logo">
+            <div class="logo" id="logo">
+              <a
+                href="https://iryna-bryzhan.github.io/psychologist-Bryzhan-Tetiana/"
+              >
+                <p class="name">Татьяна</p>
+                <p class="surname">Брижань</p>
+              </a>
+            </div>
+          </div>
+          <div class="header__menu">
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="button__text" href="#about">Обо мне</a>
+              </li>
+              <li class="menu__item">
+                <a class="button__text" href="#requests">Что я делаю</a>
+              </li>
+              <li class="menu__item">
+                <a class="button__text" href="#education">Квалификация</a>
+              </li>
+              <li class="menu__item">
+                <a class="button__text" href="#price">Стоимость</a>
+              </li>
+              <li class="menu__item">
+                <a class="button__text" href="#contact">Контакты</a>
+              </li>
+            </ul>
+            <div class="container-burger" onclick="myFunction()">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="header__menu" >
-        <ul class="menu">
-            <li class="menu__item"><a class="button__text" href="#about">Обо мне</a> </li>
-            <li class="menu__item"><a class="button__text" href="#requests">Что я делаю</a> </li>
-            <li class="menu__item"><a class="button__text" href="#education">Квалификация</a></li>
-            <li class="menu__item"><a class="button__text" href="#price">Стоимость</a></li>
-            <li class="menu__item"><a class="button__text" href="#contact">Контакты</a> </li>
-        </ul>
-        <div class="container-burger" onclick="myFunction()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+      </div>
+      <div class="menu-burger">
+        <div class="menu-burger-item">
+          <a href="#about" onclick="handleMenuClick(event, '#about')"
+            >Обо мне</a
+          >
+          <a href="#requests" onclick="handleMenuClick(event, '#requests')"
+            >Что я делаю</a
+          >
+          <a href="#education" onclick="handleMenuClick(event, '#education')"
+            >Квалификация</a
+          >
+          <a href="#price" onclick="handleMenuClick(event, '#price')"
+            >Стоимость</a
+          >
+          <a href="#contact" onclick="handleMenuClick(event, '#contact')"
+            >Контакты</a
+          >
         </div>
-    </div>
-
-    
-
-</div>
-</div>
-<div class="menu-burger">
-    <div class="menu-burger-item">
-        <a href="#about" onclick="handleMenuClick(event, '#about')">Обо мне</a>
-        <a href="#requests" onclick="handleMenuClick(event, '#requests')">Что я делаю</a>
-        <a href="#education" onclick="handleMenuClick(event, '#education')">Квалификация</a>
-        <a href="#price" onclick="handleMenuClick(event, '#price')">Стоимость</a>
-        <a href="#contact" onclick="handleMenuClick(event, '#contact')">Контакты</a>
-    </div>
-</div>
-
-</header>
-<main>
-
-
-    <section class="main container" id="main">
-    <div class="content-left wow animate__fadeInLeft" data-wow-duration="0.6s">
-        <!-- <img src="./img/Group1.png" alt=""> -->
-        <div class="content-left__text">
+      </div>
+    </header>
+    <main>
+      <section class="main container" id="main">
+        <div
+          class="content-left wow animate__fadeInLeft"
+          data-wow-duration="0.6s"
+        >
+          <div class="content-left__text">
             <p>практикующий женский психолог</p>
 
             <h1 class="header-name">Татьяна Брижань</h1>
-        </div>
-        <a class="btn main-btn" href="#form-registration">Записаться</a>
-      
-        <div class="contact-social contact-social-main">
- 
-             <div class="contacts__icon-main">
-                <div class="icon-social">
-                    <a href="https://t.me/Tatiana_Bryzhan">  <img src="img/free-icon-telegram-3536661.png" alt="telegram"></a>
-                  
-                </div>
-                <div class="icon-social">
-                    <a href="https://instagram.com/tetiana_psy_bryzhan?igshid=YmMyMTA2M2Y="> <img src="img/free-icon-instagram-2111463.png" alt="instagram"></a>
-                   
-                </div>
-                <div class="icon-social">
-                    <a href="https://wa.me/380956069319"><img src="img/free-icon-whatsapp-3536445.png" alt="whatsapp"></a>
-                    
-                </div>
-                <div class="icon-social">
-                    <a href="https://join.skype.com/invite/Ig01BsZG6Q5K"> <img src="img/free-icon-skype-3536534.png" alt="skype"></a>
-                   
-                </div>
-                <div class="icon-social">
-                    <a href="/"> <img src="img/icons8-zoom-100.png" style="width: 36px;margin-top: -3px;margin-left: -3px;" alt="zoom"></a>
-                   
-                </div>
-                <div class="icon-social">
-                    <a href="mailto: tatiana.bryzhan@gmail.com"> <img src="img/free-icon-mail-9128275.png" style="width: 42px;margin-top: -5px;margin-left: -7px;" alt="mail"></a>
-                   
-                </div>
+          </div>
+          <a class="btn main-btn" href="#form-registration">Записаться</a>
+
+          <div class="contact-social contact-social-main">
+            <div class="contacts__icon-main">
+              <div class="icon-social">
+                <a href="https://t.me/Tatiana_Bryzhan">
+                  <img src="img/free-icon-telegram-3536661.png" alt="telegram"
+                /></a>
+              </div>
+              <div class="icon-social">
+                <a
+                  href="https://instagram.com/tetiana_psy_bryzhan?igshid=YmMyMTA2M2Y="
+                >
+                  <img
+                    src="img/free-icon-instagram-2111463.png"
+                    alt="instagram"
+                /></a>
+              </div>
+              <div class="icon-social">
+                <a href="https://wa.me/380956069319"
+                  ><img src="img/free-icon-whatsapp-3536445.png" alt="whatsapp"
+                /></a>
+              </div>
+              <div class="icon-social">
+                <a href="https://join.skype.com/invite/Ig01BsZG6Q5K">
+                  <img src="img/free-icon-skype-3536534.png" alt="skype"
+                /></a>
+              </div>
+              <div class="icon-social">
+                <a href="/">
+                  <img
+                    src="img/icons8-zoom-100.png"
+                    style="width: 36px; margin-top: -3px; margin-left: -3px"
+                    alt="zoom"
+                /></a>
+              </div>
+              <div class="icon-social">
+                <a href="mailto: tatiana.bryzhan@gmail.com">
+                  <img
+                    src="img/free-icon-mail-9128275.png"
+                    style="width: 42px; margin-top: -5px; margin-left: -7px"
+                    alt="mail"
+                /></a>
+              </div>
             </div>
-</div>
-
-    </div>
-
-    <div class="content-right">
-        <div class="content-right__photo">
-            <img class="photo wow animate__fadeInRight" data-wow-duration="0.6s" src="img/DSC_6100 .jpg" alt="">
-            <img src="img/wrapp.svg" alt="" class="wrapper-right">
+          </div>
         </div>
-    </div>
-    </section>
 
-<section class="about container" id="about" >
-    <div class="about-content-left">
-        <div class="about-content-left-photo">
+        <div class="content-right">
+          <div class="content-right__photo">
+            <img
+              class="photo wow animate__fadeInRight"
+              data-wow-duration="0.6s"
+              src="img/DSC_6100 .jpg"
+              alt=""
+            />
+            <img src="img/wrapp.svg" alt="" class="wrapper-right" />
+          </div>
+        </div>
+      </section>
+
+      <section class="about container" id="about">
+        <div class="about-content-left">
+          <div class="about-content-left-photo">
             <div class="about-content-left-photo-backg"></div>
-            <img class="wow animate__fadeInLeft" data-wow-duration="0.6s"  src="img/DSC_6504.jpg" alt="photo">
+            <img
+              class="wow animate__fadeInLeft"
+              data-wow-duration="0.6s"
+              src="img/DSC_6504.jpg"
+              alt="photo"
+            />
+          </div>
         </div>
-    </div>
-    <div class="about-content-rigt wow animate__fadeInLeft" data-wow-duration="1s">
-        <div class="about-content-rigt-text">
+        <div
+          class="about-content-rigt wow animate__fadeInLeft"
+          data-wow-duration="1s"
+        >
+          <div class="about-content-rigt-text">
             <h2 class="section-title">Обо мне</h2>
             <p>Меня зовут Татьяна, я - практикующий женский психолог.</p>
-            <p>Психология для меня это возможность помочь девушкам и женщинам понять и принять себя, построить здоровые отношения, повысить самооценку, укрепить личные границы, достичь гармонии в жизни и понять, что у каждого свой путь и каждый сам несет за него ответственность.</p>
+            <p>
+              Психология для меня это возможность помочь девушкам и женщинам
+              понять и принять себя, построить здоровые отношения, повысить
+              самооценку, укрепить личные границы, достичь гармонии в жизни и
+              понять, что у каждого свой путь и каждый сам несет за него
+              ответственность.
+            </p>
             <div class="flag">
-                <div class="flag-img">
-                    <img src="img/Flag_of_Ukrai.png" alt="flag">
+              <div class="flag-img">
+                <img src="img/Flag_of_Ukrai.png" alt="flag" />
+              </div>
+              <p>Я с Украины</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="requests" id="requests">
+        <div class="container">
+          <div class="request">
+            <div class="list-left">
+              <div class="list-left-content">
+                <h2 class="section-title">Я помогаю решить такие запросы:</h2>
+                <div
+                  class="list__cases wow animate__fadeInLeft"
+                  data-wow-duration="1s"
+                >
+                  <div class="marker">1</div>
+                  <p>Повышение самооценки, принятие и любовь к самой себе</p>
                 </div>
-                <p>Я с Украины</p>
+                <div
+                  class="list__cases wow animate__fadeInLeft"
+                  data-wow-duration="1.2s"
+                >
+                  <div class="marker">2</div>
+                  <p>
+                    Переживание тяжелого расставания, выход из токсичных
+                    отношений
+                  </p>
+                </div>
+                <div
+                  class="list__cases wow animate__fadeInLeft"
+                  data-wow-duration="1.4s"
+                >
+                  <div class="marker">3</div>
+                  <p>Преодоление кризиса и выход из замкнутого круга проблем</p>
+                </div>
+                <div
+                  class="list__cases wow animate__fadeInLeft"
+                  data-wow-duration="1.6s"
+                >
+                  <div class="marker">4</div>
+                  <p>
+                    Преодоление барьеров, которые не дают создать крепкие
+                    отношения
+                  </p>
+                </div>
+                <div
+                  class="list__cases wow animate__fadeInLeft"
+                  data-wow-duration="1.8s"
+                >
+                  <div class="marker">5</div>
+                  <p>
+                    Поиск внутренних стопоров, которые мешают жить на полную
+                  </p>
+                </div>
+              </div>
+              <div class="list-photo">
+                <img src="img/DSC_5997.JPG" alt="photo" />
+              </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="requests " id="requests">
-    <div class="container">
-    <div class=" request ">
-        
-    <div class="list-left">
-        
-        <div class="list-left-content">
-            <h2 class="section-title">Я помогаю решить такие запросы:</h2>
-        <div class="list__cases wow animate__fadeInLeft" data-wow-duration="1s">
-            <div class="marker">1</div>
-            <p>Повышение самооценки, принятие и любовь к самой себе</p>
-        </div>
-        <div class="list__cases wow animate__fadeInLeft" data-wow-duration="1.2s">
-            <div class="marker">2</div>
-            <p>Переживание тяжелого расставания, выход из токсичных отношений</p></div>
-        <div class="list__cases wow animate__fadeInLeft" data-wow-duration="1.4s">
-            <div class="marker">3</div>
-            <p>Преодоление кризиса и выход из замкнутого круга проблем</p></div>
-        <div class="list__cases wow animate__fadeInLeft" data-wow-duration="1.6s">
-            <div class="marker">4</div>
-            <p>Преодоление барьеров, которые не дают создать крепкие отношения</p></div>
-        <div class="list__cases wow animate__fadeInLeft" data-wow-duration="1.8s">
-            <div class="marker">5</div>
-            <p>Поиск внутренних стопоров, которые мешают жить на полную</p>
-        </div>
-        </div>
-        <div class="list-photo">
-            <img src="img/DSC_5997.JPG" alt="photo">
-        </div>
-    </div>
-    <div class="list-right">
-        <div class="list-photo-right">
-            <img class="list-photo-1" src="img/answer_3.webp" alt="photo">
-            <img class="list-photo-line" src="img/personal-boundaries-flat-style-illustration-vector-design_538610-1076.avif" alt="">
-        </div>
-        <div class="list-right-content">
-            <div class="list__cases wow animate__fadeInRight" data-wow-duration="1s">
-                <div class="marker">6</div>
-                <p>Поиск себя, своего предназначения и понимания, чего хочется от жизни</p>
+            <div class="list-right">
+              <div class="list-photo-right">
+                <img class="list-photo-1" src="img/answer_3.webp" alt="photo" />
+                <img
+                  class="list-photo-line"
+                  src="img/personal-boundaries-flat-style-illustration-vector-design_538610-1076.avif"
+                  alt=""
+                />
+              </div>
+              <div class="list-right-content">
+                <div
+                  class="list__cases wow animate__fadeInRight"
+                  data-wow-duration="1s"
+                >
+                  <div class="marker">6</div>
+                  <p>
+                    Поиск себя, своего предназначения и понимания, чего хочется
+                    от жизни
+                  </p>
+                </div>
+                <div
+                  class="list__cases wow animate__fadeInRight"
+                  data-wow-duration="1.2s"
+                >
+                  <div class="marker">7</div>
+                  <p>
+                    Проблемы в отношениях с родными, выстраивание личных границ
+                  </p>
+                </div>
+                <div
+                  class="list__cases wow animate__fadeInRight"
+                  data-wow-duration="1.4s"
+                >
+                  <div class="marker">8</div>
+                  <p>
+                    Избавление от внутренних зажимов, которые мешают проявлению
+                    эмоций
+                  </p>
+                </div>
+                <div
+                  class="list__cases wow animate__fadeInRight"
+                  data-wow-duration="1.6s"
+                >
+                  <div class="marker">9</div>
+                  <p>Умение адекватно реагировать на негативные эмоции</p>
+                </div>
+                <div
+                  class="list__cases wow animate__fadeInRight"
+                  data-wow-duration="1.8s"
+                >
+                  <div class="marker">10</div>
+                  <p>Психосоматические симптомы, тревожные состояния</p>
+                </div>
+              </div>
             </div>
-            <div class="list__cases wow animate__fadeInRight" data-wow-duration="1.2s">
-                <div class="marker">7</div>
-                <p>Проблемы в отношениях с родными, выстраивание личных границ</p></div>
-            <div class="list__cases wow animate__fadeInRight" data-wow-duration="1.4s">
-                <div class="marker">8</div>
-                <p>Избавление от внутренних зажимов, которые мешают проявлению эмоций</p></div>
-            <div class="list__cases wow animate__fadeInRight" data-wow-duration="1.6s">
-                <div class="marker">9</div>
-                <p>Умение адекватно реагировать на негативные эмоции</p></div>
-            <div class="list__cases wow animate__fadeInRight" data-wow-duration="1.8s">
-                <div class="marker">10</div>
-                <p>Психосоматические симптомы, тревожные состояния</p></div>
+
+            <h2 class="section-title title-center">Мои ограничения:</h2>
+            <div class="confines">
+              <ul
+                class="list-confines wow animate__fadeInLeft"
+                data-wow-duration="1s"
+              >
+                <li class="list__confines-item">Не работаю с детьми</li>
+                <li class="list__confines-item">
+                  Не работаю с людьми младше 18 лет
+                </li>
+                <li class="list__confines-item">
+                  Не работаю с психическими расстройствами (депрессия,
+                  суицидальные мысли, БАР, шизофрения, обсессивно-компульсивное)
+                </li>
+              </ul>
             </div>
-        
+          </div>
         </div>
-        
-    <h2 class="section-title title-center">Мои ограничения:</h2>
-    <div class="confines">
-        <ul class="list-confines wow animate__fadeInLeft" data-wow-duration="1s">
-        <li class="list__confines-item">Не работаю с детьми</li>
-        <li class="list__confines-item">Не работаю с людьми младше 18 лет</li>
-        <li class="list__confines-item">Не работаю с психическими расстройствами (депрессия, суицидальные мысли, БАР, шизофрения, обсессивно-компульсивное)</li>
-    </ul>
-    <!-- <div class="confines-img">
-        <img src="img/free-icon-no-7521834.png" alt="no">
-    </div> -->
-    </div>
-    
+      </section>
 
-</div>
-</div>
-</section>
+      <section
+        class="quote container wow animate__fadeInDown"
+        data-wow-duration="1s"
+      >
+        <p>
+          Наши встречи проходят онлайн, в любом удобном для Вас мессенджере, в
+          удобное для Вас время. Вы все время находитесь в привычной и
+          комфортной для себя обстановке, поэтому Вам гораздо легче
+          анализировать свои внутренние ощущения и говорить о том, что Вас
+          беспокоит.
+        </p>
+      </section>
 
-<section class="quote container  wow animate__fadeInDown" data-wow-duration="1s">
-    <p>
-        Наши встречи проходят онлайн, в любом удобном для Вас мессенджере, в удобное для Вас время. Вы все время находитесь в привычной и комфортной для себя обстановке, поэтому Вам гораздо легче анализировать свои внутренние ощущения и говорить о том, что Вас беспокоит.
-    </p>
-</section>
-
-<section class="section-methods container">
+      <section class="section-methods container">
         <h2 class="section-title title-center">Мой подход к работе</h2>
         <div class="methods">
-            <div class="method1 wow animate__fadeInRight" data-wow-duration="1s">
-                <p>Я гарантирую  полную конфиденциальность.</p>
-            </div>
-            <div class="method2 wow animate__fadeInLeft" data-wow-duration="1s">
-               <p>Со мной можно быть собой и не бояться осуждения.</p> 
-            </div>
-            <div class="method3 wow animate__fadeInLeft" data-wow-duration="1s">
-               <p> Я поддерживаю любые проявления эмоций и чувств.</p>
-            </div>
-            <div class="method4 wow animate__fadeInRight" data-wow-duration="1s">
-               <p> Каждый запрос и ситуацию рассматриваю индивидуально. </p>
-            </div>
-            <div class="method5  wow animate__fadeInDown" data-wow-duration="1s">
-              <p>Беру в работу те методики и техники, которые будут эффективны именно в Вашей ситуации.</p>  
-            </div>
+          <div class="method1 wow animate__fadeInRight" data-wow-duration="1s">
+            <p>Я гарантирую полную конфиденциальность.</p>
+          </div>
+          <div class="method2 wow animate__fadeInLeft" data-wow-duration="1s">
+            <p>Со мной можно быть собой и не бояться осуждения.</p>
+          </div>
+          <div class="method3 wow animate__fadeInLeft" data-wow-duration="1s">
+            <p>Я поддерживаю любые проявления эмоций и чувств.</p>
+          </div>
+          <div class="method4 wow animate__fadeInRight" data-wow-duration="1s">
+            <p>Каждый запрос и ситуацию рассматриваю индивидуально.</p>
+          </div>
+          <div class="method5 wow animate__fadeInDown" data-wow-duration="1s">
+            <p>
+              Беру в работу те методики и техники, которые будут эффективны
+              именно в Вашей ситуации.
+            </p>
+          </div>
         </div>
-</section>
+      </section>
 
-<section class="results">
-    <div class="container">
-    <div class=" result ">
-        <h2 class="section-title title-center"> В процессе терапии Вы можете получить</h2>
-        <div class="result-content">
-    <ul class="list-result">
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="1s">Психологическую поддержку</li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="1.3s">Уверенность в себе </li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="1.6s">Здоровую самооценку</li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="1.9s">Принятие себя</li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="2.2s">Научиться брать ответственность за свою жизнь</li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="2.5s">Научиться проявлять свои эмоции</li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="2.8s">Научиться говорить "НЕТ" </li>
+      <section class="results">
+        <div class="container">
+          <div class="result">
+            <h2 class="section-title title-center">
+              В процессе терапии Вы можете получить
+            </h2>
+            <div class="result-content">
+              <ul class="list-result">
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="1s"
+                >
+                  Психологическую поддержку
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="1.3s"
+                >
+                  Уверенность в себе
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="1.6s"
+                >
+                  Здоровую самооценку
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="1.9s"
+                >
+                  Принятие себя
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="2.2s"
+                >
+                  Научиться брать ответственность за свою жизнь
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="2.5s"
+                >
+                  Научиться проявлять свои эмоции
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="2.8s"
+                >
+                  Научиться говорить "НЕТ"
+                </li>
+              </ul>
+              <div class="result-content-img">
+                <img src="img/img_20123.png" alt="" />
+              </div>
 
-    </ul>
-    <div class="result-content-img">
-        <img src="img/img_20123.png" alt="">
-    </div>
-   
-    <ul class="list-result">
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="3.1s">Выстроить гармоничные отношения с родными и близкими</li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="3.4s">Построить здоровые отношения с партнером</li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="3.7s">Укрепить личные границы</li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="4s">Найти что-то новое в себе</li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="4.3s">Принять комфортное для Вас решение</li>
-        <li class="list__results wow animate__fadeInUp" data-wow-duration="4.6s">Найти выход из ситуации</li>
+              <ul class="list-result">
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="3.1s"
+                >
+                  Выстроить гармоничные отношения с родными и близкими
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="3.4s"
+                >
+                  Построить здоровые отношения с партнером
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="3.7s"
+                >
+                  Укрепить личные границы
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="4s"
+                >
+                  Найти что-то новое в себе
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="4.3s"
+                >
+                  Принять комфортное для Вас решение
+                </li>
+                <li
+                  class="list__results wow animate__fadeInUp"
+                  data-wow-duration="4.6s"
+                >
+                  Найти выход из ситуации
+                </li>
+              </ul>
+            </div>
+            <p>и взять все то, что необходимо именно Вам</p>
+          </div>
+        </div>
+      </section>
 
-    </ul>
-</div>
-        <p>и взять все то, что необходимо именно Вам</p>
-
-</div>
-</div>
-</section>
-
-<section class="education container" id="education">
-    <div class="education-content">
-        <div class="education-content-left ">
+      <section class="education container" id="education">
+        <div class="education-content">
+          <div class="education-content-left">
             <div class="education-content-left__img">
-                <div class="education-content-left-photo-backg"></div>
-                <img class="wow animate__fadeInLeft" data-wow-duration="1s" src="img/DSC_6063-1.jpg" alt="">
+              <div class="education-content-left-photo-backg"></div>
+              <img
+                class="wow animate__fadeInLeft"
+                data-wow-duration="1s"
+                src="img/DSC_6063-1.jpg"
+                alt=""
+              />
             </div>
-            
-        </div>
-        <div class="education-content-right">
+          </div>
+          <div class="education-content-right">
             <h2 class="section-title title-center m0">Квалификация</h2>
-           
-            <div class="education-content-right__text wow animate__fadeInRight" data-wow-duration="1s">
-                <div class="education-item">
-                    <h3 class="education-title">Украинская инженерно-педагогическая академия</h3>
-                    <p>Бакалавр (2017-2021)</p>
-                    <p>Специальность: Практическая психология.</p>
+
+            <div
+              class="education-content-right__text wow animate__fadeInRight"
+              data-wow-duration="1s"
+            >
+              <div class="education-item">
+                <h3 class="education-title">
+                  Украинская инженерно-педагогическая академия
+                </h3>
+                <p>Бакалавр (2017-2021)</p>
+                <p>Специальность: Практическая психология.</p>
               </div>
               <div class="education-item">
-                  <h3 class="education-title">Larus School of Psychology</h3>
-                    <p>Курс “Практическая психология”, 80 часов (2021)</p>
-                    <p>Курс “Сексология”, 37,5 часов (2022)</p>
-            </div>
-            <div class="education-item">
-              <h3 class="education-title">International Education Center</h3>
+                <h3 class="education-title">Larus School of Psychology</h3>
+                <p>Курс “Практическая психология”, 80 часов (2021)</p>
+                <p>Курс “Сексология”, 37,5 часов (2022)</p>
+              </div>
+              <div class="education-item">
+                <h3 class="education-title">International Education Center</h3>
                 <p>Курс “Психология отношений”, 40 часов (2022)</p>
                 <p>Курс “Психиатрия для психологов”, 56 часов (2023)</p>
-                <p>Курс “Психологическое сопровождение при онкологических заболеваниях”, 27 часов (2023)</p>
+                <p>
+                  Курс “Психологическое сопровождение при онкологических
+                  заболеваниях”, 27 часов (2023)
+                </p>
                 <p>Курс “Психология военного времени”, 69 часов (2023)</p>
-        </div>
-        <div class="education-content-righ__img">
-        <img src="img/free-icon-text-book-7505280.png" alt="">
-      </div>
+              </div>
+              <div class="education-content-righ__img">
+                <img src="img/free-icon-text-book-7505280.png" alt="" />
+              </div>
             </div>
-      
-      
+          </div>
         </div>
-    </div>
+      </section>
 
-</section>
+      <section class="price container" id="price">
+        <h2 class="section-title">Стоимость</h2>
 
-<section class="price container" id="price">
-    <h2 class="section-title">Стоимость</h2>
-           
+        <div class="content">
+          <div class="cards">
+            <div
+              class="card-price wow animate__fadeInRight"
+              data-wow-duration="1s"
+            >
+              <div class="card-price-title">Консультация - знакомство</div>
+              <div class="card-price-descr">
+                <div class="time">30 минут</div>
+                <div class="price-descr-text">
+                  Первая консультация, на которой мы знакомимся и обсуждаем Ваш
+                  запрос
+                </div>
+                <div class="price-sum">12$*/12€*</div>
+              </div>
+              <div class="card-price-btn">
+                <a class="btn" href="#form-registration">Записаться</a>
+              </div>
+            </div>
 
+            <div
+              class="card-price wow animate__fadeInRight"
+              data-wow-duration="1.3s"
+            >
+              <div class="card-price-title">Разовая сессия</div>
+              <div class="card-price-descr">
+                <div class="time">55 минут</div>
+                <div class="price-descr-text">
+                  Подойдет тем, кому достаточно 1-3 сессий для проработки
+                  запроса
+                </div>
+                <div class="price-sum">25$*/25€*</div>
+              </div>
+              <div class="card-price-btn">
+                <a class="btn" href="#form-registration">Записаться</a>
+              </div>
+            </div>
 
-<div class="content">
-    <div class="cards">
-  <div class="card-price wow animate__fadeInRight" data-wow-duration="1s">
-    <div class="card-price-title">Консультация - знакомство  </div>
-    <div class="card-price-descr">
-        <div class="time">
-            30 минут
+            <div
+              class="card-price wow animate__fadeInRight"
+              data-wow-duration="1.6s"
+            >
+              <div class="card-price-title">Абонемент на 5 сессий</div>
+              <div class="card-price-descr">
+                <div class="time">55 минут</div>
+
+                <div class="price-descr-text">
+                  Для тех, кому понадобится долгосрочная терапия
+                </div>
+                <div class="price-sum">110$*/110€*</div>
+              </div>
+              <div class="card-price-btn">
+                <a class="btn" href="#form-registration">Записаться</a>
+              </div>
+            </div>
+          </div>
+
+          <p>*по курсу НБУ</p>
         </div>
-        <div class="price-descr-text">
-            Первая консультация, на которой мы знакомимся 
-и обсуждаем Ваш запрос
-        </div>
-        <div class="price-sum">
-            12$*/12€*
-        </div>
-    </div>
-    <div class="card-price-btn">
-        <a class="btn" href="#form-registration">Записаться</a>
-    </div>
-  </div>
+      </section>
 
-  <div class="card-price wow animate__fadeInRight" data-wow-duration="1.3s">
-    <div class="card-price-title">Разовая сессия</div> 
-    <div class="card-price-descr">
-        <div class="time">
-            55 минут
-        </div>
-        <div class="price-descr-text">
-            Подойдет тем, кому достаточно 1-3 сессий 
-            для проработки запроса
-        </div>
-        <div class="price-sum">
-            25$*/25€*
-        </div>
-    </div>
-    <div class="card-price-btn">
-        <a class="btn" href="#form-registration">Записаться</a>
-    </div>
-  </div>
-  
-  <div class="card-price wow animate__fadeInRight" data-wow-duration="1.6s">
-    <div class="card-price-title">Абонемент на 5 сессий</div>
-    <div class="card-price-descr">
-        <div class="time">
-            55 минут
-        </div>
-      
-      
-        <div class="price-descr-text">
-            Для тех, кому понадобится 
-            долгосрочная терапия 
-        </div>
-        <div class="price-sum">
-            110$*/110€*
-        </div>
-    </div>
-    <div class="card-price-btn">
-        <a class="btn" href="#form-registration">Записаться</a>
-    </div>
-  </div>
-
-</div>
-
-<p>*по курсу НБУ</p>
-
-</div>
-</section>
-
-
-
-<!-- 
+      <!-- 
 <section id="Результаты">
 <div class="container">
     <div class="title-section">
@@ -431,182 +619,210 @@
 </div>
 </section> -->
 
-
-
-<section class="registration" id="form-registration">
-    <div class="registration__title  wow animate__fadeInDown" data-wow-duration="1.5s">
-            <p class="title-text">Лучшая инвестиция - это время, уделенное себе!</p>
-                <p class="title-text">
-                    Сделайте первый шаг!</p>
-    </div>
-    <form class="form"  action="form-handler.php" method="post">
-        <div class="input">
+      <section class="registration" id="form-registration">
+        <div
+          class="registration__title wow animate__fadeInDown"
+          data-wow-duration="1.5s"
+        >
+          <p class="title-text">
+            Лучшая инвестиция - это время, уделенное себе!
+          </p>
+          <p class="title-text">Сделайте первый шаг!</p>
+        </div>
+        <form class="form" action="form-handler.php" method="post">
+          <div class="input">
             <label for="name">Ваше имя<span class="required">*</span></label>
-            <input id="name-call" type="text" placeholder="Имя">
+            <input id="name-call" type="text" placeholder="Имя" />
             <div class="error" id="name-error"></div>
-        </div>
-        <div class="input">
-            <label for="phone">Ваш номер телефона<span class="required">*</span></label>
-            <input id="phone" name="phone" type="tel" placeholder="990008877" title="Ukraine (Україна): +380">
+          </div>
+          <div class="input">
+            <label for="phone"
+              >Ваш номер телефона<span class="required">*</span></label
+            >
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="990008877"
+              title="Ukraine (Україна): +380"
+            />
             <div class="error" id="phone-error"></div>
-        </div>
-        <div class="input">
+          </div>
+          <div class="input">
             <label for="email">Ваш Email<span class="required">*</span></label>
-            <input id="email-call" type="email" placeholder="vika@gmail.com">
+            <input id="email-call" type="email" placeholder="vika@gmail.com" />
             <div class="error" id="email-error"></div>
-        </div>
-        <div class="card-price-btn">
+          </div>
+          <div class="card-price-btn">
             <button class="btn" type="submit">Записаться</button>
-        </div>
-    </form>
-
-
-</section>
-
-<div class="modal-success">
-    <div class="success-content">
-        <div class="success-icon">
-            <img src="./img/free-icon-success-7778643.png" alt="success">
-        </div>
-        <div class="success-text">
-            Дякуємо за заявку!
-        </div>
-    </div>
-</div>
-
-<div class="modal-error">
-    <div class="error-content">
-        <div class="error-icon">
-            <img src="./img/free-icon-cross-6711656.png" alt="error">
-        </div>
-        <div class="error-text">
-            На жаль, сталася помилка!
-        </div>
-    </div>
-</div>
-
-<div class="call-phone">
-    <div class="call-phone-icon">
-        <img id="call-icon" src="img/call-phone_black.gif" alt="call-phone">
-        <span id="call-text" style="display: none;">Заказать звонок</span>
-    </div>
-</div>
-
-<div class="modal-form-call">
-    <div class="modal-call">
-        <div class="close-call">
-            <img src="img/free-icon-close-8001566.png" alt="close">
-        </div>
-    <form class="form-call" action="form-handler.php" method="post">
-        <div class="form-input-item">  
-            <div class="input">
-                <label for="name">Ваше имя<span class="required">*</span></label>
-                <input id="name-back-call" type="text" placeholder="Имя" >
-                <div class="error" id="name-error-call"></div>
-            </div>
-        
-            
-            <div class="input">
-               <label for="phone">Телефон<span class="required">*</span></label>
-                <input id="phone-back-call" type="tel" placeholder="990008877">
-                <div class="error" id="phone-error-call"></div>
-            </div>
-            
-            <div>
-                <button  class="btn" type="submit">Заказать звонок</button>
-            </div>
-        </div>    
+          </div>
         </form>
-    </div>
-</div>
+      </section>
 
-<section class="section-contacts" id="contact">
-    <!-- <div class="container"> -->
-       
-
-<div class="contacts">
-<div class="contact-name">
-      
-     <a href="index.html"><span>Татьяна Брижань</span></a>
-        <p>практикующий женский психолог</p>
-</div>
-<div class="contact-menu">
-    <ul class="menu menu-footer">
-                    <li class="menu__item"><a class="button__text" href="#about">Обо мне</a> </li>
-                    <li class="menu__item"><a class="button__text" href="#requests">Что я делаю</a> </li>
-                    <li class="menu__item"><a class="button__text" href="#education">Квалификация</a></li>
-                    <li class="menu__item"><a class="button__text" href="#price">Стоимость</a></li>
-                    <li class="menu__item"><a class="button__text" href="#contact">Контакты</a> </li>
-                </ul>
-</div>
-
-<div class="contact-social">
-
-                <div class="contacts__number" >
-                    <a href="tel:+380956069319" ><img src="img/free-icon-phone-call-5400769.png" alt="call">+38 (095) 606 93 19</a>
-                </div>
-                <div class="contacts__email">
-                    <a href="mailto:
-                    tatiana.bryzhan@gmail.com" >
-                    <img src="img/free-icon-mail-9128275.png" alt="mail">
-                        tatiana.bryzhan@gmail.com</a>
-                </div>
-
-                 <div class="contacts__icon">
-                    <div class="icon-social">
-                        <a href="https://t.me/Tatiana_Bryzhan">  <img src="img/free-icon-telegram-3536661.png" alt="telegram"></a>
-                      
-                    </div>
-                    <div class="icon-social">
-                        <a href="https://instagram.com/tetiana_psy_bryzhan?igshid=YmMyMTA2M2Y="> <img src="img/free-icon-instagram-2111463.png" alt="instagram"></a>
-                       
-                    </div>
-                    <div class="icon-social">
-                        <a href="https://wa.me/380956069319"><img src="img/free-icon-whatsapp-3536445.png" alt="whatsapp"></a>
-                        
-                    </div>
-                    <div class="icon-social">
-                        <a href="https://join.skype.com/invite/Ig01BsZG6Q5K"> <img src="img/free-icon-skype-3536534.png" alt="skype"></a>
-                       
-                    </div>
-                    <div class="icon-social">
-                        <a href="/"> <img src="img/icons8-zoom-100.png" style="width: 36px;margin-top: -3px;margin-left: -3px;" alt="zoom"></a>
-                       
-                    </div>
-                </div>
-</div>
- </div>               
-<!-- </div>     -->
-</section>
-  </main> 
-
-<footer>
- <div class="footer">
-    <div class="container">
-                <div class="footer__text">
-                    <p>©2022 Татьяна Брижань — женский психолог</p>
-                </div>
-                <div class="privacy">
-                    <p></p>
-                </div>
-            </div>
+      <div class="modal-success">
+        <div class="success-content">
+          <div class="success-icon">
+            <img src="./img/free-icon-success-7778643.png" alt="success" />
+          </div>
+          <div class="success-text">Дякуємо за заявку!</div>
         </div>
-</footer>
+      </div>
 
+      <div class="modal-error">
+        <div class="error-content">
+          <div class="error-icon">
+            <img src="./img/free-icon-cross-6711656.png" alt="error" />
+          </div>
+          <div class="error-text">На жаль, сталася помилка!</div>
+        </div>
+      </div>
 
+      <div class="call-phone">
+        <div class="call-phone-icon">
+          <img id="call-icon" src="img/call-phone_black.gif" alt="call-phone" />
+          <span id="call-text" style="display: none">Заказать звонок</span>
+        </div>
+      </div>
 
+      <div class="modal-form-call">
+        <div class="modal-call">
+          <div class="close-call">
+            <img src="img/free-icon-close-8001566.png" alt="close" />
+          </div>
+          <form class="form-call" action="form-handler.php" method="post">
+            <div class="form-input-item">
+              <div class="input">
+                <label for="name"
+                  >Ваше имя<span class="required">*</span></label
+                >
+                <input id="name-back-call" type="text" placeholder="Имя" />
+                <div class="error" id="name-error-call"></div>
+              </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="build/intlTelInput.min.js"></script>
+              <div class="input">
+                <label for="phone"
+                  >Телефон<span class="required">*</span></label
+                >
+                <input
+                  id="phone-back-call"
+                  type="tel"
+                  placeholder="990008877"
+                />
+                <div class="error" id="phone-error-call"></div>
+              </div>
 
+              <div>
+                <button class="btn" type="submit">Заказать звонок</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
 
+      <section class="section-contacts" id="contact">
+        <div class="contacts">
+          <div class="contact-name">
+            <a href="index.html"><span>Татьяна Брижань</span></a>
+            <p>практикующий женский психолог</p>
+          </div>
+          <div class="contact-menu">
+            <ul class="menu menu-footer">
+              <li class="menu__item">
+                <a class="button__text" href="#about">Обо мне</a>
+              </li>
+              <li class="menu__item">
+                <a class="button__text" href="#requests">Что я делаю</a>
+              </li>
+              <li class="menu__item">
+                <a class="button__text" href="#education">Квалификация</a>
+              </li>
+              <li class="menu__item">
+                <a class="button__text" href="#price">Стоимость</a>
+              </li>
+              <li class="menu__item">
+                <a class="button__text" href="#contact">Контакты</a>
+              </li>
+            </ul>
+          </div>
 
+          <div class="contact-social">
+            <div class="contacts__number">
+              <a href="tel:+380956069319"
+                ><img
+                  src="img/free-icon-phone-call-5400769.png"
+                  alt="call"
+                />+38 (095) 606 93 19</a
+              >
+            </div>
+            <div class="contacts__email">
+              <a
+                href="mailto:
+                    tatiana.bryzhan@gmail.com"
+              >
+                <img src="img/free-icon-mail-9128275.png" alt="mail" />
+                tatiana.bryzhan@gmail.com</a
+              >
+            </div>
 
+            <div class="contacts__icon">
+              <div class="icon-social">
+                <a href="https://t.me/Tatiana_Bryzhan">
+                  <img src="img/free-icon-telegram-3536661.png" alt="telegram"
+                /></a>
+              </div>
+              <div class="icon-social">
+                <a
+                  href="https://instagram.com/tetiana_psy_bryzhan?igshid=YmMyMTA2M2Y="
+                >
+                  <img
+                    src="img/free-icon-instagram-2111463.png"
+                    alt="instagram"
+                /></a>
+              </div>
+              <div class="icon-social">
+                <a href="https://wa.me/380956069319"
+                  ><img src="img/free-icon-whatsapp-3536445.png" alt="whatsapp"
+                /></a>
+              </div>
+              <div class="icon-social">
+                <a href="https://join.skype.com/invite/Ig01BsZG6Q5K">
+                  <img src="img/free-icon-skype-3536534.png" alt="skype"
+                /></a>
+              </div>
+              <div class="icon-social">
+                <a href="/">
+                  <img
+                    src="img/icons8-zoom-100.png"
+                    style="width: 36px; margin-top: -3px; margin-left: -3px"
+                    alt="zoom"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-<script src="/wow.min.js"></script>
-<script>
-//  new WOW().init();
-</script>
-<script src="index.js"></script>
-</body>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="footer__text">
+            <p>©2022 Татьяна Брижань — женский психолог</p>
+          </div>
+          <div class="privacy">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="build/intlTelInput.min.js"></script>
+
+    <script src="/wow.min.js"></script>
+    <script>
+      //  new WOW().init();
+    </script>
+    <script src="index.js"></script>
+  </body>
 </html>
