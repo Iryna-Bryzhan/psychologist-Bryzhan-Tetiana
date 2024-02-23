@@ -731,6 +731,7 @@ a {
   color: red;
   font-size: 16px;
   margin-bottom: 3%;
+  margin-top: 1%;
   text-align: end;
 }
 .modal-success {
@@ -788,37 +789,177 @@ a {
   margin-bottom: 1%;
 }
 
-.call-phone {
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: "Opne Sans", sans-serif;
+}
+
+/* button */
+.cback {
   position: absolute;
   position: fixed;
-  right: 5%;
-  bottom: 8%;
+  right: 2%;
+  bottom: 5%;
   z-index: 9;
   cursor: pointer;
+  width: 170px;
+  height: 170px;
 }
-.call-phone-icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(70deg, #b2d9fb 0%, rgba(235, 238, 246, 0.5) 100%);
-  display: flex;
-  text-align: center;
-  align-items: center;
+.cback-circle {
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
   border-radius: 50%;
-  border: 2px solid #0b558e;
-  overflow: hidden;
-  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  background: #0b558e;
+  /* background: linear-gradient(70deg, #b2d9fb 0%, rgba(235, 238, 246, 0.5) 100%); */
+  color: #0b558e;
 }
-.call-phone-icon img {
-  width: 70%;
-  margin: 0 auto;
+.cback-circle--application {
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-#call-text {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.9;
-  text-align: center;
-  line-height: 1.2;
-  text-transform: uppercase;
+.cback-circle.fn1 {
+  -webkit-animation: pin 2.5s linear 0.4s infinite normal;
+  animation: pin 2.5s linear 0.4s infinite normal;
+}
+.cback-circle.fn2 {
+  -webkit-animation: pin 2s linear 0s infinite normal;
+  animation: pin 2s linear 0s infinite normal;
+  background: none;
+}
+.cback:hover .cback-circle--application {
+  -webkit-animation: hvr-phone 1.5s linear infinite normal;
+  animation: hvr-phone 1.5s linear infinite normal;
+}
+.cback .application {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation: phone-fn 2s infinite ease-in-out;
+  animation: phone-fn 2s infinite ease-in-out;
+}
+
+@-webkit-keyframes phone-fn {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(0deg) scale(1) skew(1deg);
+  }
+  10% {
+    -webkit-transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    -webkit-transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    -webkit-transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    -webkit-transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg);
+  }
+  100%,
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(0deg) scale(1) skew(1deg);
+  }
+}
+
+@keyframes phone-fn {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(0deg) scale(1) skew(1deg);
+  }
+  10% {
+    -webkit-transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    -webkit-transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    -webkit-transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    -webkit-transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg);
+  }
+  100%,
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(1) skew(1deg);
+    transform: translate(-50%, -50%) rotate(0deg) scale(1) skew(1deg);
+  }
+}
+@-webkit-keyframes pin {
+  0% {
+    opacity: 0.6;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes pin {
+  0% {
+    opacity: 0.6;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes hvr-phone {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: inset 0 0 20px -14px rgba(0, 0, 0, 0.75);
+  }
+  80% {
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: inset 0 0 20px -4px rgba(0, 0, 0, 0.75);
+  }
+}
+@keyframes hvr-phone {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: inset 0 0 20px -14px rgba(0, 0, 0, 0.75);
+  }
+  80% {
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: inset 0 0 20px -4px rgba(0, 0, 0, 0.75);
+  }
 }
 
 .modal-call {
@@ -827,7 +968,7 @@ a {
   margin: 0 auto;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 4% 3%;
+  padding: 3%;
   background: linear-gradient(70deg, #b2d9fb 0%, rgba(235, 238, 246, 1) 100%);
   color: white;
   border-radius: 10px;
@@ -835,7 +976,7 @@ a {
 
 .modal-form-call {
   background-color: #0b234990;
-  padding-top: 10%;
+  padding-top: 15%;
   display: flex;
   text-align: center;
   position: fixed;
@@ -851,7 +992,7 @@ a {
   border: none;
   border-radius: 10px;
   width: 100%;
-  height: 60px;
+  height: 50px;
   box-sizing: border-box;
   font-size: 1.5rem;
   padding: 2% 5%;
@@ -860,7 +1001,7 @@ a {
 .form-input-item label {
   font-weight: 600;
   color: #0b558e;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-align: left;
   margin-bottom: 1%;
 }
@@ -998,6 +1139,9 @@ label > span {
   }
   .about-content-rigt P {
     font-size: 1.2rem;
+  }
+  .modal-form-call {
+    padding-top: 10%;
   }
 }
 
@@ -1153,13 +1297,15 @@ label > span {
     font-size: 1.1rem;
   }
 
-  .call-phone {
-    right: 3%;
+  .modal-form-call {
+    padding-top: 12%;
   }
   .modal-call {
     width: 45%;
-    margin-top: 3%;
-    padding: 5%;
+    padding: 4% 5%;
+  }
+  .input {
+    margin-bottom: 3%;
   }
   .form-input-item label {
     font-size: 1.4rem;
@@ -1317,12 +1463,12 @@ label > span {
   .registration {
     padding-top: 8%;
   }
-  .call-phone {
-    right: 3%;
+  .input {
+    margin-bottom: 3%;
   }
   .modal-call {
     width: 50%;
-    margin-top: 4%;
+    margin-top: 1%;
     padding: 5%;
   }
   .form-input-item label {
@@ -1516,13 +1662,13 @@ label > span {
   .registration {
     padding-top: 10%;
   }
-  .call-phone {
-    right: 3%;
+  .input {
+    margin-bottom: 3%;
   }
   .modal-call {
     width: 60%;
-    margin-top: 5%;
-    padding: 5% 5%;
+    margin-top: 2%;
+    padding: 5%;
   }
   .form-input-item label {
     font-size: 1.4rem;
@@ -1762,20 +1908,13 @@ label > span {
     padding-top: 13%;
   }
 
-  .call-phone-icon {
-    width: 65px;
-    height: 65px;
-  }
-  #call-text {
-    font-size: 0.6rem;
-  }
-  .call-phone {
-    right: 3%;
+  .input {
+    margin-bottom: 3%;
   }
   .modal-call {
     width: 70%;
-    margin-top: 8%;
-    padding: 10% 5%;
+    margin-top: 5%;
+    padding: 5%;
   }
   .form-input-item label {
     font-size: 1.4rem;
@@ -2072,21 +2211,18 @@ label > span {
   .registration {
     padding-top: 15%;
   }
-
-  .call-phone-icon {
-    width: 65px;
-    height: 65px;
+  .input {
+    margin-bottom: 3%;
   }
-  #call-text {
-    font-size: 0.6rem;
-  }
-  .call-phone {
-    right: 3%;
+  .cback {
+    right: 1%;
+    width: 150px;
+    height: 150px;
   }
   .modal-call {
     width: 84%;
     margin-top: 20%;
-    padding: 10% 5%;
+    padding: 7% 5%;
   }
   .form-input-item label {
     font-size: 1.4rem;
@@ -2436,27 +2572,25 @@ label > span {
     font-size: 0.9rem;
     justify-content: center;
   }
-  .call-phone-icon {
-    width: 65px;
-    height: 65px;
-  }
-  #call-text {
-    font-size: 0.6rem;
-  }
-  .call-phone {
-    right: 3%;
+  .cback {
+    right: 1%;
+    width: 150px;
+    height: 150px;
   }
   .modal-call {
     width: 86%;
     margin-top: 30%;
     padding: 10% 5%;
   }
+  .input {
+    margin-bottom: 3%;
+  }
   .form-input-item label {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .form-input-item input {
-    height: 50px;
-    font-size: 1.3rem;
+    height: 45px;
+    font-size: 1.2rem;
   }
   .registration {
     padding-top: 15%;

@@ -433,6 +433,7 @@ function collectFormData() {
   const emailInput = document.getElementById("email-call");
   const phoneInput = document.getElementById("phone");
   const cod = document.querySelector(".iti__selected-dial-code").innerHTML;
+
   const formData = {
     name: nameInput.value.trim(),
     email: emailInput.value.trim(),
@@ -467,15 +468,24 @@ document.querySelector(".form").addEventListener("submit", function (event) {
 });
 
 // Получаем ссылку на элемент с классом "call-phone"
-const callPhone = document.querySelector(".call-phone");
+const cback = document.querySelector(".cback");
+
+const btnClick = document.querySelectorAll(".btn-click");
 // Получаем ссылку на модальное окно с классом "modal-form-call"
 const modalFormCall = document.querySelector(".modal-form-call");
 
 // Добавляем обработчик события "click" на элемент "callPhone"
-callPhone.addEventListener("click", function () {
+cback.addEventListener("click", function () {
   // При клике на "callPhone" отображаем модальное окно
   modalFormCall.style.display = "block";
 });
+// Применяем цикл для добавления обработчика события ко всем элементам в коллекции
+for (let i = 0; i < btnClick.length; i++) {
+  btnClick[i].addEventListener("click", function () {
+    // При клике на "btnClick" отображаем модальное окно
+    modalFormCall.style.display = "block";
+  });
+}
 
 const btnCloseCall = document.querySelector(".close-call");
 
@@ -523,10 +533,29 @@ function validatePhoneCall() {
   }
 }
 
+// Функция для валидации email
+function validateEmailCall() {
+  const emailInput = document.getElementById("email-back-call");
+  const emailError = document.getElementById("email-error-call");
+  const email = emailInput.value.trim();
+
+  if (email === "") {
+    emailError.textContent = "Пожалуйста, введите ваш email";
+    return false;
+  } else if (!isValidEmail(email)) {
+    emailError.textContent = "Пожалуйста, введите корректный email";
+    return false;
+  } else {
+    emailError.textContent = "";
+    return true;
+  }
+}
+
 // Функция для сброса значений полей формы
 function resetFormFieldsCall() {
   document.getElementById("name-back-call").value = "";
   document.getElementById("phone-back-call").value = "";
+  document.getElementById("email-back-call").value = "";
 }
 
 // Функция для скрытия модального окна
@@ -539,10 +568,12 @@ function collectFormDataCall() {
   const nameInput = document.getElementById("name-back-call");
   const phoneInput = document.getElementById("phone-back-call");
   const cod = document.querySelector(".iti__selected-dial-code").innerHTML;
+  const emailInput = document.getElementById("email-back-call");
 
   const formData = {
     name: nameInput.value.trim(),
     phone: cod + phoneInput.value.trim(),
+    email: emailInput.value.trim(),
   };
 
   console.log(formData);
@@ -570,31 +601,16 @@ document
 document
   .getElementById("phone-back-call")
   .addEventListener("blur", validatePhoneCall);
+document
+  .getElementById("email-back-call")
+  .addEventListener("blur", validateEmailCall);
 
 document
   .querySelector(".form-call")
   .addEventListener("submit", function (event) {
     event.preventDefault(); // Предотвращаем отправку формы
 
-    if (validateNameCall() && validatePhoneCall()) {
+    if (validateNameCall() && validatePhoneCall() && validateEmailCall()) {
       collectFormDataCall(); // Если все данные валидны, собираем их и отправляем форму
     }
   });
-
-// Получаем ссылки на иконку и текст
-const icon = document.getElementById("call-icon");
-const text = document.getElementById("call-text");
-
-// Функция для переключения между иконкой и текстом
-function toggleIconAndText() {
-  if (icon.style.display === "none") {
-    icon.style.display = "inline";
-    text.style.display = "none";
-  } else {
-    icon.style.display = "none";
-    text.style.display = "inline";
-  }
-}
-
-// Запускаем функцию toggleIconAndText каждые 2 секунды
-setInterval(toggleIconAndText, 3500);
