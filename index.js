@@ -614,3 +614,29 @@ document
       collectFormDataCall(); // Если все данные валидны, собираем их и отправляем форму
     }
   });
+
+  // Получаем ссылку на кнопку
+const cbackButton = document.getElementById('cback');
+
+// Функция для проверки, виден ли элемент при прокрутке
+function isElementInView(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Функция для отслеживания прокрутки страницы
+function handleScroll() {
+  if (isElementInView(cbackButton)) {
+    cbackButton.classList.add('visible');
+  } else {
+    cbackButton.classList.remove('visible');
+  }
+}
+
+// Добавляем обработчик события прокрутки
+window.addEventListener('scroll', handleScroll);
